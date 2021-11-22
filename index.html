@@ -70,18 +70,27 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="" class="reveal-content contact-form" action="https://formsubmit.co/povausa.org@gmail.com" method="POST">
+                        <form class="contact-form" action="https://formsubmit.co/povausa.org@gmail.com" method="POST">
+                          <!--Honeypot-
+                          <input type="text" name="honey_" style="display: none;">-->
+
+                          <!--Disable Honeypot
+                          <input type="hidden" name="_captcha" value="false">-->
+                          
+                          <!--Suc
+                          <imput type="hidden" name="_next" value="https://povausa.org/success.html"-->
+
                             <div class="form-group">
-                                <input type="name" class="form-control" id="name" placeholder="Full name">
+                                <input type="name" class="form-control" name="name" id="name" placeholder="Full name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
+                                <textarea class="form-control" rows="3" name="message" id="message" placeholder="Enter your message" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg">Send</button>
                         </form>
